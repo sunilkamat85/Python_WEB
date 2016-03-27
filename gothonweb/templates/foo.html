@@ -1,0 +1,22 @@
+$def with (sun)
+
+<html>
+    <head>
+        <title>Gothons Of Planet Percal #25</title>
+    </head>
+<body>
+
+$if sun:
+    This is a <em style="color: green; font-size: 6em;">$sun</em>.
+$else:
+    <em>Hello</em>, world!
+
+<form action="/hello" method="POST">
+ A Greeting: <input type="text" name="greet">
+ <br/>
+ Your Name: <input type="text" name="name">
+ <br/>
+ <input type="submit">
+</form>
+</body>
+</html>

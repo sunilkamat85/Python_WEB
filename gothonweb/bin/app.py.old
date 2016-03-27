@@ -1,0 +1,23 @@
+
+import web
+
+urls = (
+  '/', 'index'
+)
+
+app = web.application(urls, globals())
+render = web.template.render('templates/')
+class index:
+    def GET(self):
+#        sun = "TRAINING / LEARNING WEBSITE"
+	form = web.input(name="nobody", wat=None)
+	if form.wat:
+		sun = "%s %s" % (form.name, form.wat)
+	        return render.foo(sun = sun)
+	else:
+		return "Error: wat is required"
+    def POST(self):
+	form = web.input(name="nobody", greet="hello")
+
+if __name__ == "__main__":
+    app.run()
